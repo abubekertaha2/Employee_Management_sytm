@@ -1,24 +1,23 @@
-import React from "react";
 
-// Profile Component to display employee's details
+import profilePicture from "../assets/img.jpg";
+
 const Profile = () => {
-    // Employee data object
     const employee = {
-        name: "John Doe",
+        name: "Abubeker Taha",
         id: "E123",
         jobTitle: "Software Engineer",
         department: "Development",
-        profilePicture: "https://via.placeholder.com/150",
-        email: "john.doe@example.com",
-        phone: "123-456-7890",
+        profilePicture: profilePicture,
+        email: "abu.doe@example.com",
+        phone: "xxx-xxx-xx",
         dateOfHire: "2021-01-15",
         status: "Full-Time",
-        skills: ["JavaScript", "React", "Node.js"],
+        skills: ["JavaScript", "React", "Node.js", "Python"],
         projects: ["Project A", "Project B"],
         manager: {
             name: "Abubeker Taha",
             jobTitle: "Development Manager",
-            email: "abubeker.taha@example.com",
+            email: "abubekertaha3@gmail.com",
             phone: "098-765-4321",
             department: "Management"
         }
@@ -26,27 +25,21 @@ const Profile = () => {
 
     return (
         <div className="profile-container" style={styles.container}>
-            {/* Profile Picture */}
             <img 
                 src={employee.profilePicture} 
                 alt={`${employee.name}'s profile`} 
                 style={styles.profileImage} 
             />
-            
-            {/* Employee Info */}
+ 
             <h2>{employee.name}</h2>
             <p><strong>ID:</strong> {employee.id}</p>
             <p><strong>Job Title:</strong> {employee.jobTitle}</p>
             <p><strong>Department:</strong> {employee.department}</p>
-
-            {/* Contact Information */}
             <section>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> {employee.email}</p>
                 <p><strong>Phone:</strong> {employee.phone}</p>
             </section>
-
-            {/* Manager Information */}
             <section>
                 <h3>Manager Information</h3>
                 <p><strong>Manager Name:</strong> {employee.manager.name}</p>
@@ -55,15 +48,12 @@ const Profile = () => {
                 <p><strong>Manager Phone:</strong> {employee.manager.phone}</p>
                 <p><strong>Manager Department:</strong> {employee.manager.department}</p>
             </section>
-
-            {/* Employment Details */}
             <section>
                 <h3>Employment Details</h3>
                 <p><strong>Date of Hire:</strong> {employee.dateOfHire}</p>
                 <p><strong>Status:</strong> {employee.status}</p>
             </section>
 
-            {/* Skills Section */}
             <section>
                 <h3>Skills</h3>
                 <ul>
@@ -72,8 +62,6 @@ const Profile = () => {
                     ))}
                 </ul>
             </section>
-
-            {/* Projects Section */}
             <section>
                 <h3>Projects</h3>
                 <ul>
@@ -83,7 +71,6 @@ const Profile = () => {
                 </ul>
             </section>
 
-            {/* Action Buttons */}
             <div style={styles.buttonContainer}>
                 <button style={styles.button}>Edit Profile</button>
                 <button style={{ ...styles.button, marginLeft: "10px" }}>Change Password</button>
@@ -92,7 +79,6 @@ const Profile = () => {
     );
 };
 
-// Inline styles for the component
 const styles = {
     container: {
         padding: '20px',
